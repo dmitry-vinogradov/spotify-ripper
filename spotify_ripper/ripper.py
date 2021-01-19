@@ -152,7 +152,7 @@ class Ripper(threading.Thread):
         self.event_loop = EventLoop(self.session, 0.1, self)
 
     def stop_event_loop(self):
-        if self.event_loop.isAlive():
+        if self.event_loop.is_alive():
             self.event_loop.stop()
             self.event_loop.join()
 

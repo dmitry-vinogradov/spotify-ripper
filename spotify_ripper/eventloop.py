@@ -75,7 +75,7 @@ class EventLoop(threading.Thread):
     def run(self):
         timeout_countdown = self._session.process_events()
 
-        while self._runnable and self._ripper.isAlive():
+        while self._runnable and self._ripper.is_alive():
             timeout = min(timeout_countdown, self._queue_timeout)
 
             try:

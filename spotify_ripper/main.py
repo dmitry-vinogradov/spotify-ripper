@@ -618,7 +618,7 @@ def main(prog_args=sys.argv[1:]):
         if not args.has_log:
             tty.setcbreak(sys.stdin.fileno())
 
-        while ripper.isAlive():
+        while ripper.is_alive():
             schedule.run_pending()
 
             # check if the escape button was pressed
